@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff4b5c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #f45b69;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff4b5c;
+        }
+        .hearts {
+            font-size: 40px;
+            color: #ff4b5c;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my valentine?</h1>
+    
+    <!-- Heart emojis before the buttons -->
+    <div class="hearts">
+        ❤️ ❤️ ❤️
+    </div>
+
+    <button onclick="answer('Yes')">Yes</button>
+    <button onclick="answer('Of course')">Of course</button>
+
+    <div id="response" class="message"></div>
+
+    <!-- Heart emojis after the response -->
+    <div class="hearts" id="heartResponse">
+        ❤️ ❤️ ❤️
+    </div>
+
+    <script>
+        function answer(choice) {
+            const responseElement = document.getElementById('response');
+            const heartResponseElement = document.getElementById('heartResponse');
+            
+            if (choice === 'Yes') {
+                responseElement.innerText = "Yay! You said yes!";
+                heartResponseElement.innerHTML = "❤️ ❤️ You're my valentine! ❤️ ❤️ I love you handsome!!”;
+            } else if (choice === 'Of course') {
+                responseElement.innerText = "Aww! You said of course!";
+                heartResponseElement.innerHTML = "❤️ ❤️ You're my valentine! ❤️ ❤️ I love you handsome!!”;
+            }
+        }
+    </script>
+</body>
+</html>
